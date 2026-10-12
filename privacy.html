@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hunter's Networking — Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 680px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+    line-height: 1.6;
+    color: #1c1c1e;
+  }
+  h1 { font-size: 1.6rem; margin-bottom: 0.2rem; }
+  .tagline { color: #666; margin-top: 0; }
+  h2 { font-size: 1.15rem; margin-top: 2.2rem; }
+  h3 { font-size: 1rem; margin-top: 1.4rem; margin-bottom: 0.4rem; }
+  ul { padding-left: 1.2rem; }
+  li { margin-bottom: 0.45rem; }
+  a { color: #0066cc; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; margin: 0.8rem 0; }
+  th, td { text-align: left; padding: 0.45rem 0.6rem; border-bottom: 1px solid rgba(0,0,0,0.08); font-size: 0.92rem; vertical-align: top; }
+  th { color: #666; font-weight: 600; }
+  code { background: rgba(0,0,0,0.06); padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.9em; }
+  .note {
+    margin-top: 1.2rem;
+    padding: 0.9rem 1.1rem;
+    background: rgba(0, 102, 204, 0.08);
+    border-radius: 10px;
+    font-size: 0.92rem;
+  }
+  footer {
+    margin-top: 3rem;
+    font-size: 0.85rem;
+    color: #888;
+  }
+  nav { margin-bottom: 2rem; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+  <nav><a href="./">← Support</a></nav>
+
+  <h1>Privacy Policy</h1>
+  <p class="tagline">Hunter's Networking — last updated 12 October 2026.</p>
+
+  <p>Hunter's Networking has no account system, no backend server, and no analytics. This page explains, plainly, what the small number of network requests the app makes actually involve.</p>
+
+  <h2>The short version</h2>
+  <ul>
+    <li>Nothing you type or that the app discovers is sent to me (the developer) or stored on any server I operate — there isn't one.</li>
+    <li>No ads, no analytics, no crash reporting, no tracking SDKs of any kind.</li>
+    <li>No account or sign-in, so there's no profile of you to collect in the first place.</li>
+    <li>Each tool only talks to the internet when you actively use it, and only sends the address you're looking up — never anything else on your device.</li>
+  </ul>
+
+  <h2>What each tool sends, and to whom</h2>
+  <p>Hunter's Networking is a toolkit of independent network-diagnostic tools. When you use one that needs the internet, it makes a direct request from your device to the relevant public service below — there is no intermediary server of mine in between.</p>
+
+  <table>
+    <tr><th>Tool</th><th>Sent to</th><th>What's sent</th></tr>
+    <tr><td>My IP</td><td>ipify.org, ipinfo.io</td><td>A request for your current public IP — nothing else.</td></tr>
+    <tr><td>IP Geolocation</td><td>ipwho.is</td><td>The IP or domain you entered.</td></tr>
+    <tr><td>DNS Lookup</td><td>Whichever resolver you choose: Google, Cloudflare, Quad9, or OpenDNS</td><td>The domain name you looked up.</td></tr>
+    <tr><td>WHOIS</td><td>The relevant domain/IP registry directly (IANA, ARIN, RIPE, APNIC, etc.)</td><td>The domain or IP you looked up, over the standard WHOIS protocol.</td></tr>
+    <tr><td>MAC Lookup</td><td>api.macvendors.com</td><td>The MAC address / OUI prefix you entered.</td></tr>
+    <tr><td>BGP Info / BGPlay</td><td>RIPEstat (RIPE NCC)</td><td>The IP or AS number you looked up.</td></tr>
+    <tr><td>Vulnerability Assessment</td><td>Shodan's public InternetDB/CVE lookup</td><td>The IP you're assessing.</td></tr>
+    <tr><td>Ping, Traceroute, Port Scanner, Firewall Test, SSL Inspector, Speed Test</td><td>Whatever host you enter, plus (Speed Test only) a public speed-test endpoint</td><td>That's the point of the tool — it connects to the address you give it.</td></tr>
+  </table>
+
+  <p>Each of those is operated by its own provider and governed by its own privacy policy, not mine — I don't control what they do with a request once it reaches them, only what Hunter's Networking sends.</p>
+
+  <h2>What never leaves your device</h2>
+  <ul>
+    <li><strong>Local network scanning</strong> (Network Scanner, Bonjour Browser) — stays on your local network; nothing is sent over the internet.</li>
+    <li><strong>Wi-Fi details</strong> — your network's name and BSSID are read locally (iOS requires Location permission for this) and shown only to you.</li>
+    <li><strong>Bluetooth scanning</strong> — nearby BLE devices are discovered locally and never transmitted anywhere.</li>
+    <li><strong>Calendar reminders</strong> — SSL certificate expiry reminders are written directly to your own device calendar; nothing is uploaded.</li>
+    <li><strong>Query history and favourites</strong> — stored locally on your device only.</li>
+  </ul>
+
+  <h2>Permissions the app may ask for</h2>
+  <table>
+    <tr><th>Permission</th><th>Why</th></tr>
+    <tr><td>Local Network</td><td>To discover devices and services on your network (Network Scanner, Bonjour Browser).</td></tr>
+    <tr><td>Location (While Using)</td><td>iOS requires this before an app can read the current Wi-Fi network's name — used for nothing else.</td></tr>
+    <tr><td>Bluetooth</td><td>To scan for nearby Bluetooth LE devices.</td></tr>
+    <tr><td>Calendar (optional)</td><td>To add a reminder before an SSL/TLS certificate you've inspected expires.</td></tr>
+    <tr><td>Notifications (optional)</td><td>For the same certificate-expiry reminders, if you choose notifications over calendar events.</td></tr>
+  </table>
+  <p>You can decline any of these — the rest of the app keeps working, just without that specific tool's functionality.</p>
+
+  <h2>Children's privacy</h2>
+  <p>Hunter's Networking is a technical utility, not directed at children, and collects no personal information from anyone, of any age.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If what the app sends or asks for ever changes, this page will be updated and the "last updated" date above will change accordingly.</p>
+
+  <div class="note">
+    This policy only describes app behaviour at the <code>last updated</code> date above — if you're reading this much later, check that date is recent relative to the version you're using.
+  </div>
+
+  <h2>Contact</h2>
+  <p><a href="mailto:andy@hunter89.net">andy@hunter89.net</a></p>
+
+  <footer>&copy; 2026 Andy Hunter</footer>
+</body>
+</html>
